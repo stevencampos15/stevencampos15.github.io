@@ -5090,7 +5090,11 @@ a.close.disabled {
 .carousel.pointer-event {
   -ms-touch-action: pan-y;
   touch-action: pan-y; }
-
+.owl-carousel .owl-stage,
+.owl-carousel.owl-drag .owl-item{
+    -ms-touch-action: auto !important;
+        touch-action: auto !important;
+}
 .carousel-inner {
   position: relative;
   width: 100%;
