@@ -6,8 +6,8 @@
 	<title>Steven Campos - Resume</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="icon" type="image/png" href="images/ico/logoicoB.png" >
-	
+	<link rel="icon" type="image/png" href="images/ico/logoicoB.png">
+
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/language.css">
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -39,17 +40,26 @@
 
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav nav ml-auto">
-					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Inicio</span></a></li>
-					<li class="nav-item"><a href="#about-section" class="nav-link"><span>Acerca de</span></a></li>
-					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-					<li class="nav-item"><a href="#services-section" class="nav-link"><span>Servicios</span></a></li>
-					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Habilidades</span></a></li>
-					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Proyectos</span></a></li>
-					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contacto</span></a></li>
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span class="lang"
+								key="nav-inicio">Inicio</span></a>
+					</li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span class="lang"
+								key="nav-acerca">Acerca de</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span class="lang"
+								key="nav-resume">Resume</span></a></li>
+					<li class="nav-item"><a href="#services-section" class="nav-link"><span class="lang"
+								key="nav-servicios">Servicios</span></a></li>
+					<li class="nav-item"><a href="#skills-section" class="nav-link"><span class="lang"
+								key="nav-habilidades">Habilidades</span></a></li>
+					<li class="nav-item"><a href="#projects-section" class="nav-link"><span class="lang"
+								key="nav-proyectos">Proyectos</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span class="lang"
+								key="nav-contacto">Contacto</span></a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
 	<section id="home-section" class="hero" data-stellar-background-ratio="0.5">
 		<div class="home-slider  owl-carousel">
 			<div class="slider-item ">
@@ -63,11 +73,15 @@
 						<div class="one-forth d-flex  align-items-center ftco-animate"
 							data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
-								<span class="subheading">Hola!</span>
-								<h1 class="mb-4 mt-3">Soy <span>Steven Campos</span></h1>
-								<h2 class="mb-4">Me apasiona la programaci&oacute;n</h2>
-								<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Contr&aacute;tame</a> <a
-										href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">Mis
+								<span class="subheading lang" key="carousel-hola">Hola!</span>
+								<h1 class="mb-4 mt-3">
+									<div class="lang" key="carousel-soy" style="display: initial;">Soy</div>
+									<span>Steven Campos</span>
+								</h1>
+								<h2 class="mb-4 lang" key="carousel-pasion">Me apasiona la programaci&oacute;n</h2>
+								<p><a href="#contact-section" class="btn btn-primary py-3 px-4 lang"
+										key="carousel-hireme">Contr&aacute;tame</a> <a href="#projects-section"
+										class="btn btn-white btn-outline-white py-3 px-4 lang" key="carousel-works">Mis
 										Trabajos</a></p>
 							</div>
 						</div>
@@ -86,10 +100,17 @@
 						<div class="one-forth d-flex align-items-center ftco-animate"
 							data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
-								<span class="subheading">Hola!</span>
-								<h1 class="mb-4 mt-3">Soy un <span>desarrollador</span> de Santa Tecla, El Salvador</h1>
-								<p><a href="#contact-section" class="btn btn-primary py-3 px-4">Contr&aacute;tame</a> <a
-										href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">Mis
+								<span class="subheading lang" key="carousel-hola2">Hola!</span>
+								<h1 class="mb-4 mt-3">
+									<div class="lang" key="carousel-ima" style="display: initial;">Soy un</div> <span
+										class="lang" key="carousel-developer">desarrollador</span>
+									<div class="lang" key="carousel-based" style="display: initial;">de Santa Tecla, El
+										Salvador</div>
+								</h1>
+								</h1>
+								<p><a href="#contact-section" class="btn btn-primary py-3 px-4 lang"
+										key="carousel-hireme">Contr&aacute;tame</a> <a href="#projects-section"
+										class="btn btn-white btn-outline-white py-3 px-4 lang" key="carousel-works">Mis
 										Trabajos</a></p>
 							</div>
 						</div>
@@ -113,16 +134,21 @@
 				<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
 					<div class="row justify-content-start pb-3">
 						<div class="col-md-12 heading-section ftco-animate">
-							<h1 class="big">Acerca de</h1>
-							<h2 class="mb-4">Acerca de Mi</h2>
-							<p>Soy un joven desarrollador, amante del aprendizaje.</p>
+							<h1 class="big lang" key="nav-acerca">Acerca de</h1>
+							<h2 class="mb-4 lang" key="about-me">Acerca de Mi</h2>
+							<p class="lang" key="about-desc">Soy un joven desarrollador, amante del aprendizaje.</p>
 							<ul class="about-info mt-4 px-md-0 px-2">
-								<li class="d-flex"><span>Nombre:</span> <span>Steven Campos</span></li>
-								<li class="d-flex"><span>Fecha de Nacimiento:</span> <span>08 Junio, 1995</span></li>
-								<li class="d-flex"><span>Direcci&oacute;n:</span> <span>Santa Tecla, La Libertad, El
+								<li class="d-flex "><span class="lang" key="about-name">Nombre:</span> <span>Steven
+										Campos</span>
+								</li>
+								<li class="d-flex"><span class="lang" key="about-dob">Fecha de Nacimiento:</span> <span
+										class="lang" key="about-date">08 Junio, 1995</span></li>
+								<li class="d-flex"><span class="lang" key="about-address">Direcci&oacute;n:</span>
+									<span>Santa Tecla, La Libertad, El
 										Salvador</span></li>
 								<li class="d-flex"><span>Email:</span> <span>stevencampos15@gmail.com</span></li>
-								<li class="d-flex"><span>Tel&eacute;fono: </span> <span>(+503) 6009-7967</span></li>
+								<li class="d-flex"><span class="lang" key="about-phone">Tel&eacute;fono: </span>
+									<span>(+503) 6009-7967</span></li>
 							</ul>
 						</div>
 					</div>
@@ -130,9 +156,10 @@
 						<div class="text">
 							<p class="mb-4">
 								<span class="number" data-number="25">0</span>
-								<span>A&ntilde;os Aprendiendo</span>
+								<span class="lang" key="about-years">A&ntilde;os Aprendiendo</span>
 							</p>
-							<p><a href="etc/resume.pdf" target="_blank" class="btn btn-primary py-3 px-3">Descargar
+							<p><a href="etc/resume.pdf" target="_blank" class="btn btn-primary py-3 px-3 lang"
+									key="about-download">Descargar
 									CV</a></p>
 						</div>
 					</div>
@@ -154,18 +181,20 @@
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2013-2014</span>
-						<h2>T&eacute;cnico en Ingenier&iacute;a en Sistemas</h2>
+						<h2 class="lang" key="resume-tech">T&eacute;cnico en Ingenier&iacute;a en Sistemas</h2>
 						<span class="position">ITCA-FEPADE</span>
-						<p class="mt-4">Despu&eacute;s de graduarme de bachillerato decid&iacute; que la mejor
+						<p class="mt-4 lang" key="resume-tech2">Despu&eacute;s de graduarme de bachillerato
+							decid&iacute; que la mejor
 							opci&oacute;n era un T&eacute;cnico de dos a&ntilde;os
 							en ITCA, gracias a las herramientas y metodolog&iacute;a de teor&iacute;a y pr&aacute;ctica
 							aprend&iacute; mucho.</p>
 					</div>
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2014</span>
-						<h2>Diploma en IT Essentials</h2>
+						<h2 class="lang" key="resume-dipit">Diploma en IT Essentials</h2>
 						<span class="position">CISCO</span>
-						<p class="mt-4">Mientras estudiaba el t&eacute;cnico tuve la oportunidad de participar en el
+						<p class="mt-4 lang" key="resume-dipit2">Mientras estudiaba el t&eacute;cnico tuve la
+							oportunidad de participar en el
 							dipolamado de CISCO donde aprend&iacute;
 							los fundamentos b&aacute;sicos de los componentes de una computadora y prepararla para que
 							est&eacute; lista para una red.
@@ -173,10 +202,11 @@
 					</div>
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2014</span>
-						<h2>Diploma en CCNA</h2>
+						<h2 class="lang" key="resume-dipccna">Diploma en CCNA</h2>
 						<span class="position">CISCO</span>
-						<p class="mt-4">Al completar el diplomado en IT Essentials se me di&oacute; la oportunidad de
-							participar en el diplamado de CCNA,
+						<p class="mt-4 lang" key="resume-dipccna2">Al completar el diplomado en IT Essentials se me
+							di&oacute; la oportunidad de
+							participar en el diplomado de CCNA,
 							donde aprend&iacute; los fundamentos acerca de las redes inform&aacute;ticas, lo cual fue de
 							mucha ayuda e interesante.
 						</p>
@@ -186,9 +216,10 @@
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2018</span>
-						<h2>Diplomado en Java</h2>
+						<h2 class="lang" key="resume-dipjava">Diplomado en Java</h2>
 						<span class="position">ITCA-FEPADE</span>
-						<p class="mt-4">Mientras estudiaba la licenciatura en la Universidad Jos&eacute; Mat&iacute;as
+						<p class="mt-4 lang" key="resume-dipjava2">Mientras estudiaba la licenciatura en la Universidad
+							Jos&eacute; Mat&iacute;as
 							Delgado me llam&oacute; la atenci&oacute;n el
 							lenguaje de programaci&oacute;n JAVA, por lo que, me dispuse a sacar el diplomado impartido
 							en un lugar que sab&iacute;a que era confiable
@@ -198,9 +229,11 @@
 
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2015-2020</span>
-						<h2>Licenciatura en Tecnolog&iacute;as de la Informaci&oacute;n</h2>
+						<h2 class="lang" key="resume-bach">Licenciatura en Tecnolog&iacute;as de la Informaci&oacute;n
+						</h2>
 						<span class="position">Universidad Jos&eacute; Mat&iacute;as Delgado </span>
-						<p class="mt-4">Despu&eacute;s de conocer acerca del rubro, decid&iacute; completar la carrera
+						<p class="mt-4 lang" key="resume-bach2">Despu&eacute;s de conocer acerca del rubro,
+							decid&iacute; completar la carrera
 							en una universidad donde sab&iacute;a que
 							la educaci&oacute;n inclu&iacute;a los negocios y su propuesta era &uacute;nica y diferente.
 							Actualmente estoy completando mi quinto y
@@ -210,16 +243,18 @@
 
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2020-</span>
-						<h2>Por definir</h2>
-						<span class="position">Por definir</span>
-						<p class="mt-4">En este a&ntilde;o busco ampliar mis horizontes, por lo que estoy en busca de un
+						<h2 class="lang" key="resume-tbd">Por definir</h2>
+						<span class="position lang" key="resume-tbd">Por definir</span>
+						<p class="mt-4 lang" key="resume-tbd2">En este a&ntilde;o busco ampliar mis horizontes, por lo
+							que estoy en busca de un
 							nuevo reto.</p>
 					</div>
 				</div>
 			</div>
 			<div class="row justify-content-center mt-5">
 				<div class="col-md-6 text-center ftco-animate">
-					<p><a href="etc/resume.pdf" target="_blank" class="btn btn-primary py-4 px-5">Descargar CV</a></p>
+					<p><a href="etc/resume.pdf" target="_blank" class="btn btn-primary py-4 px-5 lang"
+							key="about-download">Descargar CV</a></p>
 				</div>
 			</div>
 		</div>
@@ -229,9 +264,10 @@
 		<div class="container">
 			<div class="row justify-content-center py-5 mt-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Servicios</h1>
-					<h2 class="mb-4">Servicios</h2>
-					<p>Estas son las &aacute;reas donde creo que destaco y busco nuevos retos.</p>
+					<h1 class="big big-2 lang" key="services">Servicios</h1>
+					<h2 class="mb-4 lang" key="services">Servicios</h2>
+					<p class="lang" key="services-desc">Estas son las &aacute;reas donde creo que destaco y busco nuevos
+						retos.</p>
 				</div>
 			</div>
 			<div class="row">
@@ -241,7 +277,7 @@
 							<i class="flaticon-web-design"></i>
 						</span>
 						<div class="desc">
-							<h3 class="mb-5">Dise&ntilde;o Web</h3>
+							<h3 class="mb-5 lang" key="services-web">Dise&ntilde;o Web</h3>
 						</div>
 					</a>
 				</div>
@@ -251,7 +287,8 @@
 							<i class="flaticon-innovation"></i>
 						</span>
 						<div class="desc">
-							<h3 class="mb-5">Desarrollador de Aplicaciones M&oacute;viles</h3>
+							<h3 class="mb-5 lang" key="services-mobile">Desarrollador de Aplicaciones M&oacute;viles
+							</h3>
 						</div>
 					</a>
 				</div>
@@ -261,7 +298,7 @@
 							<i class="flaticon-ux-design"></i>
 						</span>
 						<div class="desc">
-							<h3 class="mb-5">Desarrollador Web</h3>
+							<h3 class="mb-5 lang" key="services-webdev">Desarrollador Web</h3>
 						</div>
 					</a>
 				</div>
@@ -272,7 +309,8 @@
 							<i class="flaticon-analysis"></i>
 						</span>
 						<div class="desc">
-							<h3 class="mb-5">Dise&ntilde;o y Gesti&oacute;n de Bases de Datos</h3>
+							<h3 class="mb-5 lang" key="services-database">Dise&ntilde;o y Gesti&oacute;n de Bases de
+								Datos</h3>
 						</div>
 					</a>
 				</div>
@@ -282,7 +320,8 @@
 							<i class="flaticon-flasks"></i>
 						</span>
 						<div class="desc">
-							<h3 class="mb-5">Desarrollador de Aplicaciones de Escritorio</h3>
+							<h3 class="mb-5 lang" key="services-desktop">Desarrollador de Aplicaciones de Escritorio
+							</h3>
 						</div>
 					</a>
 				</div>
@@ -292,7 +331,7 @@
 							<i class="flaticon-ideas"></i>
 						</span>
 						<div class="desc">
-							<h3 class="mb-5">Mantenimiento Preventivo y Correctivo</h3>
+							<h3 class="mb-5 lang" key="services-prevent">Mantenimiento Preventivo y Correctivo</h3>
 						</div>
 					</a>
 				</div>
@@ -305,9 +344,9 @@
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Habilidades</h1>
-					<h2 class="mb-4">Mis Habilidades</h2>
-					<p>Busco siempre mejorar y desarrollar nuevas habilidades</p>
+					<h1 class="big big-2 lang" key="nav-habilidades">Habilidades</h1>
+					<h2 class="mb-4 lang" key="skills">Mis Habilidades</h2>
+					<p class="lang" key="skills-desc">Busco siempre mejorar y desarrollar nuevas habilidades</p>
 				</div>
 			</div>
 			<div class="row">
@@ -386,9 +425,9 @@
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Proyectos</h1>
-					<h2 class="mb-4">Mis Proyectos</h2>
-					<p>Algunos de los proyectos que he realizado</p>
+					<h1 class="big big-2 lang" key="nav-proyectos">Proyectos</h1>
+					<h2 class="mb-4 lang" key="projects">Mis Proyectos</h2>
+					<p class="lang" key="projects-desc">Algunos de los proyectos que he realizado</p>
 				</div>
 			</div>
 			<div class="row">
@@ -397,7 +436,8 @@
 						style="background-image: url(images/multiplataforma2.jpg);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3><a href="proyectos/multiplataforma.html">Proyecto Multiplataforma</a></h3>
+							<h3><a href="proyectos/multiplataforma.html" class="lang" key="projects-multi">Proyecto
+									Multiplataforma</a></h3>
 							<span>Java</span>
 						</div>
 					</div>
@@ -407,8 +447,9 @@
 						style="background-image: url(images/tv/desktop.JPG);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3><a href="proyectos/facturacion.html">Programa de Facturaci&oacute;n</a></h3>
-							<span>JAVA-Escritorio</span>
+							<h3><a href="proyectos/facturacion.html" class="lang" key="projects-fact">Programa de
+									Facturaci&oacute;n</a></h3>
+							<span class="lang" key="projects-fact2">JAVA-Escritorio</span>
 						</div>
 					</div>
 				</div>
@@ -418,7 +459,7 @@
 						style="background-image: url(images/project-1.jpg);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3><a href="#">Wroking on it</a></h3>
+							<h3><a href="#">Wroking on it...</a></h3>
 							<span>Otro Proyecto</span>
 						</div>
 					</div>
@@ -440,8 +481,9 @@
 								style="background-image: url(images/pw/proyectoweb.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center p-4">
-									<h3><a href="proyectos/proyectoweb.html">Proyecto Web</a></h3>
-									<span>Dise&ntilde;o y Desarrollo Web</span>
+									<h3><a href="proyectos/proyectoweb.html" class="lang" key="projects-web">Proyecto
+											Web</a></h3>
+									<span class="lang" key="projects-web2">Dise&ntilde;o y Desarrollo Web</span>
 								</div>
 							</div>
 						</div>
@@ -472,7 +514,7 @@
 							<strong class="number" style="display: inline-block !important;"
 								data-number="100">0</strong>
 							<strong class="number" style="display: inline-block !important;">%</strong>
-							<span>Comprometido</span>
+							<span class="lang" key="projects-com">Comprometido</span>
 						</div>
 					</div>
 				</div>
@@ -482,7 +524,7 @@
 							<strong class="number" style="display: inline-block !important;">+</strong>
 							<strong class="number" style="display: inline-block !important;"
 								data-number="3500">0</strong>
-							<span>Horas de Aprendizaje</span>
+							<span class="lang" key="projects-hours">Horas de Aprendizaje</span>
 						</div>
 					</div>
 				</div>
@@ -490,7 +532,7 @@
 					<div class="block-18">
 						<div class="text">
 							<strong class="number" data-number="1200">0</strong>
-							<span>Clientes por satisfacer</span>
+							<span class="lang" key="projects-clients">Clientes por Satisfacer</span>
 						</div>
 					</div>
 				</div>
@@ -498,7 +540,7 @@
 					<div class="block-18">
 						<div class="text">
 							<strong class="number" data-number="500">0</strong>
-							<span>Tazas de Caf&eacute;</span>
+							<span class="lang" key="projects-coffee">Tazas de Caf&eacute;</span>
 						</div>
 					</div>
 				</div>
@@ -510,9 +552,14 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Estoy <span>Dispuesto</span> a Nuevos Retos</h2>
+					<h2>
+						<div class="lang" key="projects-estoy" style="display: initial;">Estoy</div> <span class="lang"
+							key="projects-ready" style="display: initial;">Dispuesto</span>
+						<div class="lang" key="projects-challenges" style="display: initial;">a Nuevos Retos </div>
+					</h2>
 					<p>"The way to get started is to quit talking and begin doing."</p>
-					<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Cont&aacute;ctame</a></p>
+					<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5 lang"
+							key="projects-contactme">Cont&aacute;ctame</a></p>
 				</div>
 			</div>
 		</div>
@@ -522,9 +569,10 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Contacto</h1>
-					<h2 class="mb-4">Contacta Conmigo</h2>
-					<p>Puedes tomar mis datos o llenar el formulario de abajo y me contactar&eacute; contigo.</p>
+					<h1 class="big big-2 lang" key="nav-contacto">Contacto</h1>
+					<h2 class="mb-4 lang" key="projects-contactme">Contacta Conmigo</h2>
+					<p class="lang" key="contact-desc">Puedes tomar mis datos o llenar el formulario de abajo y me
+						contactar&eacute; contigo.</p>
 				</div>
 			</div>
 
@@ -538,7 +586,7 @@
 
 							</div>
 						</a>
-						<h3 class="mb-4">Ubicaci&oacute;n</h3>
+						<h3 class="mb-4 lang" key="contact-location">Ubicaci&oacute;n</h3>
 						<p><a target="_blank" href="https://goo.gl/maps/3UuHGnrBn84rgQDu5">Santa Tecla, La Libertad, El
 								Salvador</a></p>
 					</div>
@@ -552,7 +600,7 @@
 
 							</div>
 						</a>
-						<h3 class="mb-4">N&uacute;mero de Contacto</h3>
+						<h3 class="mb-4 lang" key="contact-phone">N&uacute;mero de Contacto</h3>
 						<p><a href="tel://(+503)60097967">(+503) 6009 7967</a></p>
 					</div>
 				</div>
@@ -565,7 +613,7 @@
 
 							</div>
 						</a>
-						<h3 class="mb-4">Correo Electr&oacute;nico</h3>
+						<h3 class="mb-4 lang" key="contact-email">Correo Electr&oacute;nico</h3>
 						<p><a href="mailto:stevencampos15@gmail.com">stevencampos15@gmail.com</a></p>
 					</div>
 				</div>
@@ -578,7 +626,7 @@
 
 							</div>
 						</a>
-						<h3 class="mb-4">Sitio Web</h3>
+						<h3 class="mb-4 lang" key="contact-website">Sitio Web</h3>
 						<p><a href="https://stevencampos15.github.io">MiSitio.com</a></p>
 					</div>
 				</div>
@@ -589,24 +637,27 @@
 					<form action="https://mailthis.to/stevenemail" id="formContacto" method="POST"
 						encType="multipart/form-data" name="formContacto" class="bg-light p-4 p-md-5 contact-form">
 						<div class="form-group">
-							<input type="text" name="name" required class="form-control" placeholder="Tu Nombre">
+							<input type="text" name="name" id="frmName" required class="form-control"
+								placeholder="Tu Nombre">
 						</div>
 						<div class="form-group">
-							<input type="email" required name="_replyto" class="form-control"
+							<input type="email" required id="frmEmail" name="_replyto" class="form-control"
 								placeholder="Tu Correo Electr&oacute;nico">
 						</div>
 						<div class="form-group">
-							<input type="text" name="_subject" class="form-control" placeholder="Asunto">
+							<input type="text" name="_subject" class="form-control" id="frmSubject"
+								placeholder="Asunto">
 						</div>
 						<div class="form-group">
-							<textarea name="message" required id="message" cols="30" rows="7" class="form-control"
+							<textarea name="message" required id="frmMessage" cols="30" rows="7" class="form-control"
 								placeholder="Mensaje"></textarea>
 						</div>
 						<input type="hidden" name="_after"
 							value="https://stevencampos15.github.io/formulario-gracias.html" />
 						<input type="hidden" name="_honeypot" value="">
 						<div class="form-group">
-							<input type="submit" name="submit" value="Enviar Mensaje" class="btn btn-primary py-3 px-5">
+							<input type="submit" name="submit" id="frmSend" value="Enviar Mensaje"
+								class="btn btn-primary py-3 px-5">
 						</div>
 					</form>
 
@@ -618,14 +669,20 @@
 		</div>
 	</section>
 
+	<!-- Language Switch -->
+	<div class="custom-control custom-switch" id="language">
+		<input type="checkbox" class="custom-control-input" id="languageSwitch">
+		<label class="custom-control-label" id="englishLabel" for="languageSwitch">Espa&ntilde;ol</label>
+	</div>
 
 	<footer class="ftco-footer ftco-section">
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Acerca de</h2>
-						<p>Soy Steven Campos, un joven desarrollador amante del aprendizaje y estoy en busca de nuevos
+						<h2 class="ftco-heading-2 lang" key="nav-acerca">Acerca de</h2>
+						<p class="lang" key="footer-acerca">Soy Steven Campos, un joven desarrollador amante del
+							aprendizaje y estoy en busca de nuevos
 							retos.
 						</p>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
@@ -642,32 +699,44 @@
 					<div class="ftco-footer-widget mb-4 ml-md-4">
 						<h2 class="ftco-heading-2">Links</h2>
 						<ul class="list-unstyled">
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Inicio</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Acerca de</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Servicios</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Proyectos</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contacto</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+									<div style="display: initial;" class="lang" key="nav-inicio">Inicio</div>
+								</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+									<div style="display: initial;" class="lang" key="nav-acerca">Acerca de</div>
+								</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+									<div style="display: initial;" class="lang" key="nav-servicios">Servicios</div>
+								</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+									<div style="display: initial;" class="lang" key="nav-proyectos">Proyectos</div>
+								</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+									<div style="display: initial;" class="lang" key="nav-contacto">Contacto</div>
+								</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Servicios</h2>
+						<h2 class="ftco-heading-2 lang" key="nav-servicios">Servicios</h2>
 						<ul class="list-unstyled">
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Dise&ntilde;o Web</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Desarrollador de
-									Aplicaciones M&oacute;viles</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Desarrollador Web</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Dise&ntilde;o y
-									Gesti&oacute;n de Bases de Datos</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Desarrollador de
-									Aplicaciones de Escritorio</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+									<div style="display: initial;" class="lang" key="services-web">Dise&ntilde;o Web</div>
+								</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span><div style="display: initial;" class="lang" key="services-mobile">Desarrollador de
+									Aplicaciones M&oacute;viles</div></a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span><div style="display: initial;" class="lang" key="services-webdev">Desarrollador Web</div></a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span><div style="display: initial;" class="lang" key="services-database">Dise&ntilde;o y
+									Gesti&oacute;n de Bases de Datos</div></a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span><div style="display: initial;" class="lang" key="services-desktop">Desarrollador de
+									Aplicaciones de Escritorio</div></a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">¿Preguntas?</h2>
+						<h2 class="ftco-heading-2 lang" key="footer-questions">¿Preguntas?</h2>
 						<div class="block-23 mb-3">
 							<ul>
 								<li><span class="icon icon-map-marker"></span><span class="text">Santa Tecla, La
@@ -715,8 +784,10 @@
 	<script src="js/aos.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
+	<script src="js/language.js"></script>
 
 	<script src="js/main.js"></script>
+
 </body>
 
 </html>
