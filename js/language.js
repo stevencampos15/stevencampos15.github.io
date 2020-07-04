@@ -115,11 +115,11 @@ $(document).ready(function () {
                 $(this).text(arrLang['en'][$(this).attr('key')]);
 
                 //Cambiar placeholder de form
-                $('#frmName').attr('placeholder','Your Name');
-                $('#frmEmail').attr('placeholder','Your Email');
-                $('#frmSubject').attr('placeholder','Subject');
-                $('#frmMessage').attr('placeholder','Message');
-                $('#frmSend').attr('value','Send Message');
+                $('#frmName').attr('placeholder', 'Your Name');
+                $('#frmEmail').attr('placeholder', 'Your Email');
+                $('#frmSubject').attr('placeholder', 'Subject');
+                $('#frmMessage').attr('placeholder', 'Message');
+                $('#frmSend').attr('value', 'Send Message');
             });
 
         }
@@ -131,13 +131,33 @@ $(document).ready(function () {
                 $(this).text(arrLang['es'][$(this).attr('key')]);
 
                 //Cambiar placeholder de form
-                $('#frmName').attr('placeholder','Tu Nombre');
-                $('#frmEmail').attr('placeholder','Tu Correo Electr\u00F3nico');
-                $('#frmSubject').attr('placeholder','Asunto');
-                $('#frmMessage').attr('placeholder','Mensaje');
-                $('#frmSend').attr('value','Enviar Mensaje');
+                $('#frmName').attr('placeholder', 'Tu Nombre');
+                $('#frmEmail').attr('placeholder', 'Tu Correo Electr\u00F3nico');
+                $('#frmSubject').attr('placeholder', 'Asunto');
+                $('#frmMessage').attr('placeholder', 'Mensaje');
+                $('#frmSend').attr('value', 'Enviar Mensaje');
             });
         }
+    });
+
+    var prevScrollpos = window.pageYOffset;
+    var cont = 0;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos < currentScrollPos ) {
+            document.getElementById("language").style.bottom = "0";
+            cont +=1;
+        } else {
+            document.getElementById("language").style.bottom = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+    $("body").mouseleave(function () {
+        $("#language").fadeOut(95);
+    });
+    $("body").mousemove(function () {
+        $("#language").fadeIn(95);
     });
 
 });
