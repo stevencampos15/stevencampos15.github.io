@@ -125,7 +125,7 @@ $(document).ready(function () {
         }
 
         else if ($(this).prop("checked") == false) {
-            $("#englishLabel").text("Espa\u00F1ol");
+            $("#englishLabel").text("English");
             $('#englishLabel').css({ 'color': '#999999' });
             $('.lang').each(function (index, item) {
                 $(this).text(arrLang['es'][$(this).attr('key')]);
@@ -141,12 +141,10 @@ $(document).ready(function () {
     });
 
     var prevScrollpos = window.pageYOffset;
-    var cont = 0;
     window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos < currentScrollPos ) {
             document.getElementById("language").style.bottom = "0";
-            cont +=1;
         } else {
             document.getElementById("language").style.bottom = "-50px";
         }
