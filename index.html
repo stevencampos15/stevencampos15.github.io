@@ -34,6 +34,15 @@
 		gtag('js', new Date());
 
 		gtag('config', 'UA-175247148-1');
+
+		var dob = new Date("06/08/1995");
+		var month_diff = Date.now() - dob.getTime();
+		var age_dt = new Date(month_diff);    
+		var year = age_dt.getUTCFullYear();
+		var age = Math.abs(year - 1970);
+		window.addEventListener('DOMContentLoaded', (event) => {
+		document.getElementById("age").setAttribute("data-number", age);
+		});
 	</script>
 </head>
 
@@ -165,7 +174,7 @@
 					<div class="counter-wrap ftco-animate d-flex mt-md-3">
 						<div class="text">
 							<p class="mb-4">
-								<span class="number" data-number="25">0</span>
+								<span class="number" id="age" >0</span>
 								<span class="lang" key="about-years">A&ntilde;os Aprendiendo</span>
 							</p>
 							<p><a href="etc/resume.pdf" target="_blank" class="btn btn-primary py-3 px-3 lang"
