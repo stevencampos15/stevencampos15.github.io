@@ -49,7 +49,7 @@ arrLang['en']['resume-dipjava'] = 'Diploma in JAVA';
 arrLang['en']['resume-dipjava2'] = 'While studying for my degree at the Jos\u00E9 Mat\u00EDas Delgado University, my attention was drawn to the JAVA programming language, which is why I decided to get the Diploma in a place that I knew was reliable and guaranteed my learning quality.';
 
 arrLang['en']['resume-bach'] = 'Bachelor of Information Technology';
-arrLang['en']['resume-bach2'] = 'After learning about the field, I decided to complete the degree at a university where I knew that education included business education as well, their proposal was unique and different. I am currently completing my fifth and final year.';
+arrLang['en']['resume-bach2'] = 'After learning about the field, I decided to complete the degree at a university where I knew that education included business education as well, their proposal was unique and different.';
 
 arrLang['en']['resume-tbd'] = 'To Be Defined';
 arrLang['en']['resume-tbd2'] = 'This year I am looking to expand my horizons, so I am looking for a new challenge.';
