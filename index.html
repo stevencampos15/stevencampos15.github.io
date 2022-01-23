@@ -35,13 +35,20 @@
 
 		gtag('config', 'UA-175247148-1');
 
+		//Calculate age for animation
 		var dob = new Date("06/08/1995");
 		var month_diff = Date.now() - dob.getTime();
 		var age_dt = new Date(month_diff);    
 		var year = age_dt.getUTCFullYear();
 		var age = Math.abs(year - 1970);
+
+		//Calculate days of drinking coffee
+		var firstDayOfCoffee = new Date("06/08/2013")
+		var differenceTime = Date.now() - firstDayOfCoffee.getTime();
+		var daysDrinkingCoffee = differenceTime / (1000 * 3600 * 24);
 		window.addEventListener('DOMContentLoaded', (event) => {
 		document.getElementById("age").setAttribute("data-number", age);
+		document.getElementById("daysofcoffee").setAttribute("data-number", daysDrinkingCoffee);
 		});
 	</script>
 </head>
@@ -558,7 +565,7 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18">
 						<div class="text">
-							<strong class="number" data-number="500">0</strong>
+							<strong class="number" id="daysofcoffee" >0</strong>
 							<span class="lang" key="projects-coffee">Tazas de Caf&eacute;</span>
 						</div>
 					</div>
