@@ -9424,7 +9424,9 @@ textarea.form-control {
   color: #fff;
 }
 .contact-section .contact-form {
-  width: 100%; }
+  width: 100%; 
+  border-radius: 1rem;
+  border: 1px solid #ffffff4d;}
 
 .contact-section .img {
   width: 100%;
