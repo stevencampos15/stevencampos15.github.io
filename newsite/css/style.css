@@ -447,9 +447,9 @@ pre {
   overflow-y: scroll; }
 
 .container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  max-width: 100%;
+  padding-left: calc(20px + 2.5vw) !important;
+  padding-right: calc(20px + 2.5vw) !important;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
@@ -8146,7 +8146,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: #999999; }
+  color: #9e9e9e; }
   body.menu-show {
     overflow: hidden;
     position: fixed;
