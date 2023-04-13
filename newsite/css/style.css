@@ -447,7 +447,7 @@ pre {
   overflow-y: scroll; }
 
 .container {
-  max-width: 100%;
+  width: 100%;
   padding-left: calc(20px + 2.5vw) !important;
   padding-right: calc(20px + 2.5vw) !important;
   margin-right: auto;
@@ -463,7 +463,7 @@ pre {
       max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 100%; } }
 
 .container-fluid {
   width: 100%;
