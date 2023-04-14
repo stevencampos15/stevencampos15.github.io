@@ -9669,14 +9669,9 @@ textarea.form-control {
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
 
-  //Animation Welcome
+/*Animation Welcome*/
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100);
-
-html, body {
-  height: 100%;
-  background: #122121;
-}
 
 .anview-logo {
   font-family: 'lato', sans-serif;
@@ -9688,6 +9683,7 @@ html, body {
   margin-left: -128px;
   position: absolute;
   animation: logo 5s ease;
+}
   
   @keyframes logo {
     from {
@@ -9829,9 +9825,8 @@ html, body {
       transform: translateX(60px);
     }
   }
-}
 
-//End of animation welcome
+/*End of animation welcome*/
 
 @-webkit-keyframes loader-rotate {
   100% {
