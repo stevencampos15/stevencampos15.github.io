@@ -41,7 +41,7 @@
    $.Scrollax();
 
 // function([string1, string2],target id,[color1,color2])    for console text
-consoleText(['Hello World.', 'Console Text', 'Made with Love.'], 'text',['tomato','rebeccapurple','lightblue']);
+consoleText(['Welcome!', 'Soy Steven Campos', 'Soy un desarrollador'], 'text',['tomato','rebeccapurple','lightblue']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
