@@ -328,50 +328,7 @@ h6, .h6 {
   font-size: 1.25rem;
   font-weight: 300; }
 
-  div#welcomediv{
-    display:inline-block;
-    overflow:hidden;
-    white-space:nowrap;
-  }
   
-  div#welcomediv:first-of-type {    /* For increasing performance 
-                         ID/Class should've been used. 
-                         For a small demo 
-                         it's okaish for now */
-    animation: showup 7s infinite;
-  }
-  
-  div#welcomediv:last-of-type {
-    width:0px;
-    animation: reveal 7s infinite;
-  }
-  
-  div#welcomediv:last-of-type span {
-    margin-left:-355px;
-    animation: slidein 7s infinite;
-  }
-  
-  @keyframes showup {
-      0% {opacity:0;}
-      20% {opacity:1;}
-      80% {opacity:1;}
-      100% {opacity:0;}
-  }
-  
-  @keyframes slidein {
-      0% { margin-left:-800px; }
-      20% { margin-left:-800px; }
-      35% { margin-left:0px; }
-      100% { margin-left:0px; }
-  }
-  
-  @keyframes reveal {
-      0% {opacity:0;width:0px;}
-      20% {opacity:1;width:0px;}
-      30% {width:355px;}
-      80% {opacity:1;}
-      100% {opacity:0;width:355px;}
-  }
 
 
 .display-1 {
@@ -9714,6 +9671,33 @@ textarea.form-control {
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
+
+  .hidden {
+    opacity:0;
+  }
+  .console-container {
+   
+    font-family:Khula;
+    font-size:4em;
+    text-align:center;
+    height:200px;
+    width:600px;
+    display:block;
+    position:absolute;
+    color:white;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+  }
+  .console-underscore {
+     display:inline-block;
+    position:relative;
+    top:-0.14em;
+    left:10px;
+  }
+
 
 @-webkit-keyframes loader-rotate {
   100% {
