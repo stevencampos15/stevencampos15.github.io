@@ -9697,14 +9697,14 @@ textarea.form-control {
     }
   }
   
-  span {
+  #spanWelcome {
     position: absolute;
     font-size: 64px;
     color: #fff;
     line-height: 60px;
   }
   
-  span:nth-child(1) {
+  #spanWelcome:nth-child(1) {
     font-size: 32px;
     width: inherit;
     text-align: center;
@@ -9727,7 +9727,7 @@ textarea.form-control {
     }
   }
   
-  span:nth-child(2) {
+  #spanWelcome:nth-child(2) {
     font-size: 28px;
     width: inherit;
     text-align: center;
@@ -9749,7 +9749,7 @@ textarea.form-control {
     }
   }
   
-  span:nth-child(3) {
+  #spanWelcome:nth-child(3) {
     left: 13px;
     animation: a 5s ease;
     transform: translateX(0px);
@@ -9768,7 +9768,7 @@ textarea.form-control {
     }
   }
   
-  span:nth-child(4) {
+  #spanWelcome:nth-child(4) {
     left: 54px;
     animation: n 5s ease;
     transform: translateX(0px);
@@ -9787,7 +9787,7 @@ textarea.form-control {
     }
   }
   
-  span:nth-child(5) {
+  #spanWelcome:nth-child(5) {
     left: 30px;
     opacity: 0;
     animation: ice 5s ease;
@@ -9808,7 +9808,7 @@ textarea.form-control {
     }
   }
   
-  span:nth-child(6) {
+  #spanWelcome:nth-child(6) {
     left: 102px;
     animation: view 5s ease;
     transform: translateX(0px);
