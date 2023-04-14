@@ -9683,7 +9683,6 @@ textarea.form-control {
   margin-left: -128px;
   position: absolute;
   animation: logo 5s ease;
-}
   
   @keyframes logo {
     from {
@@ -9697,14 +9696,14 @@ textarea.form-control {
     }
   }
   
-  #spanWelcome {
+  #spanwelcome {
     position: absolute;
     font-size: 64px;
     color: #fff;
     line-height: 60px;
   }
   
-  #spanWelcome:nth-child(1) {
+  #spanwelcome:nth-child(1) {
     font-size: 32px;
     width: inherit;
     text-align: center;
@@ -9727,17 +9726,17 @@ textarea.form-control {
     }
   }
   
-  #spanWelcome:nth-child(2) {
+  #spanwelcome:nth-child(2) {
     font-size: 28px;
     width: inherit;
     text-align: center;
     opacity: 0;
     margin-top: -55px;
     color: rgba(255,255,255,.6);
-    animation: weprovide 5s ease;
+    animation: welcome 5s ease;
   }
   
-  @keyframes weprovide {
+  @keyframes welcome {
     from {
       opacity: 0;
     }
@@ -9749,83 +9748,72 @@ textarea.form-control {
     }
   }
   
-  #spanWelcome:nth-child(3) {
+  #spanwelcome:nth-child(3) {
     left: 13px;
-    animation: a 5s ease;
+    animation: steven 5s ease;
     transform: translateX(0px);
   }
   
-  @keyframes a {
+  @keyframes steven {
     from {
       opacity: 0;
       transform: translateX(-90px);
     }
     40% {
-      opacity: 1;
+      opacity: 0;
     }
     70% {
+      opacity: 0;
       transform: translateX(-90px);
     }
   }
   
-  #spanWelcome:nth-child(4) {
-    left: 54px;
-    animation: n 5s ease;
-    transform: translateX(0px);
-  }
-  
-  @keyframes n {
-    from {
-      opacity: 0;
-      transform: translateX(-70px);
-    }
-    40% {
-      opacity: 1;
-    }
-    70% {
-      transform: translateX(-70px);
-    }
-  }
-  
-  #spanWelcome:nth-child(5) {
-    left: 30px;
+  #spanwelcome:nth-child(4) {
+    left: 0px;
+    animation: bienvenido 4s ease;
+    transform: translateX(-70px);
     opacity: 0;
-    animation: ice 5s ease;
   }
   
-  @keyframes ice {
+  @keyframes bienvenido {
     from {
       opacity: 0;
+      transform: translateX(-70px);
+      transform: translateY(-150px);
     }
     40% {
       opacity: 1;
     }
     70% {
-      opacity: 1;
-    }
-    80% {
       opacity: 0;
+      transform: translateX(-70px);
+      
+      
     }
   }
   
-  #spanWelcome:nth-child(6) {
-    left: 102px;
-    animation: view 5s ease;
-    transform: translateX(0px);
-  }
-  @keyframes view {
-    from {
-      opacity: 0;
-      transform: translateX(60px);
-    }
-    40% {
-      opacity: 1;
-    }
-    70% {
-      transform: translateX(60px);
-    }
-  }
+  #spanwelcome:nth-child(5) {
 
+    animation: campos 5s ease;
+    transform: translateX(-100px);
+    transform: translateY(80px);
+    left: 0px;
+  }
+  @keyframes campos {
+    from {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+    40% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 0;
+      left: 102px;
+      transform: translateX(60px);
+    }
+  }
+}
 /*End of animation welcome*/
 
 @-webkit-keyframes loader-rotate {
