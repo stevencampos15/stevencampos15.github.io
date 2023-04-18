@@ -9829,60 +9829,33 @@ textarea.form-control {
     }
   }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 1200px) {
     #spanwelcome {
-      font-size: 20vw;
+      font-size: 15vw;
     }
     #spanwelcome:nth-child(1) {
-      left: 4vw;
       font-size: 8vw;
     }
     #spanwelcome:nth-child(3) {
-      left: -5vw;
-      font-size: 20vw;
+      left: 0vw;
+      font-size: 15vw;
     }
     #spanwelcome:nth-child(5) {
-      left: -5vw;
-      font-size: 20vw;
-      top: 2vw;
+      left: 0vw;
+      font-size: 15vw;
+      top: 3vw;
     }
-  
+
     #spanwelcome:nth-child(2) {
       left: 20vw;
       font-size: 8vw;
     }
     #spanwelcome:nth-child(4) {
-      left: 2vw;
-      font-size: 11vw;
+      left: 1vw;
+      font-size: 10vw;
     }
   }
-  @media screen and (max-width: 768px) {
-    #spanwelcome {
-      font-size: 15vw;
-    }
-    #spanwelcome:nth-child(1) {
-      left: 4vw;
-      font-size: 8vw;
-    }
-    #spanwelcome:nth-child(3) {
-      left: -5vw;
-      font-size: 15vw;
-    }
-    #spanwelcome:nth-child(5) {
-      left: -5vw;
-      font-size: 15vw;
-      top: -3vw;
-    }
-  
-    #spanwelcome:nth-child(2) {
-      left: 20vw;
-      font-size: 8vw;
-    }
-    #spanwelcome:nth-child(4) {
-      left: 1.5vw;
-      font-size: 9vw;
-    }
-  }
+
   @media screen and (max-width: 992px) {
     #spanwelcome {
       left: 4vw;
@@ -9911,33 +9884,66 @@ textarea.form-control {
       font-size: 11vw;
     }
   }
-  
-  @media screen and (max-width: 1200px) {
+
+  @media screen and (max-width: 768px) {
     #spanwelcome {
       font-size: 15vw;
     }
     #spanwelcome:nth-child(1) {
+      left: 4vw;
       font-size: 8vw;
     }
     #spanwelcome:nth-child(3) {
-      left: 0vw;
+      left: -5vw;
       font-size: 15vw;
     }
     #spanwelcome:nth-child(5) {
-      left: 0vw;
+      left: -5vw;
       font-size: 15vw;
-      top: 3vw;
+      top: -3vw;
     }
-
+  
     #spanwelcome:nth-child(2) {
       left: 20vw;
       font-size: 8vw;
     }
     #spanwelcome:nth-child(4) {
-      left: 1vw;
-      font-size: 10vw;
+      left: 1.5vw;
+      font-size: 9vw;
     }
   }
+
+  @media screen and (max-width: 576px) {
+    #spanwelcome {
+      font-size: 20vw;
+    }
+    #spanwelcome:nth-child(1) {
+      left: 4vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(3) {
+      left: -5vw;
+      font-size: 20vw;
+    }
+    #spanwelcome:nth-child(5) {
+      left: -5vw;
+      font-size: 20vw;
+      top: 2vw;
+    }
+  
+    #spanwelcome:nth-child(2) {
+      left: 20vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(4) {
+      left: 2vw;
+      font-size: 11vw;
+    }
+  }
+
+
+  
+
   @media screen and (min-width: 1201px) {
     #spanwelcome {
       left: 10vw;
