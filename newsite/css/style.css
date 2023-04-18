@@ -9895,11 +9895,11 @@ textarea.form-control {
     }
     #spanwelcome:nth-child(3) {
       left: -5vw;
-      font-size: 15vw;
+      font-size: 18vw;
     }
     #spanwelcome:nth-child(5) {
       left: -5vw;
-      font-size: 15vw;
+      font-size: 18vw;
       top: -3vw;
     }
   
@@ -9908,8 +9908,8 @@ textarea.form-control {
       font-size: 8vw;
     }
     #spanwelcome:nth-child(4) {
-      left: 1.5vw;
-      font-size: 9vw;
+      left: 1vw;
+      font-size: 10vw;
     }
   }
 
@@ -9936,8 +9936,8 @@ textarea.form-control {
       font-size: 8vw;
     }
     #spanwelcome:nth-child(4) {
-      left: 2vw;
-      font-size: 11vw;
+      left: 0vw;
+      font-size: 10vw;
     }
   }
 
