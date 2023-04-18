@@ -9725,13 +9725,11 @@ textarea.form-control {
 
 #spanwelcome:nth-child(1) {
   font-size: 4vw;
-  margin-top: -20vw;
-  margin-left: -5vw;
   color: rgba(255,255,255,.6);
-  animation: weare 5s ease;
+  animation: soy 5s ease;
 }
 
-@keyframes weare {
+@keyframes soy {
   from {
     opacity: 0;
     transform: translateY(-40px);
@@ -9744,25 +9742,13 @@ textarea.form-control {
     transform: translateY(-40px);
   }
 }
-
-@media screen and (max-width: 768px) {
-  #spanwelcome {
-    font-size: 20vw;
-  }
-
-  #spanwelcome:nth-child(1) {
-    font-size: 8vw;
-    margin-top: -40vw;
-    margin-left: -10vw;
-  }
-}
   
   #spanwelcome:nth-child(2) {
-    font-size: 64px;
+    font-size: 10vw;
     width: inherit;
     text-align: center;
     opacity: 0;
-    margin-top: -110px;
+    margin-top: -4.5%;
     color: rgba(255,255,255,.6);
     animation: welcome 5s ease;
   }
@@ -9780,7 +9766,6 @@ textarea.form-control {
   }
   
   #spanwelcome:nth-child(3) {
-    left: 13px;
     animation: steven 5s ease;
     transform: translateX(0px);
   }
@@ -9800,24 +9785,24 @@ textarea.form-control {
   }
   
   #spanwelcome:nth-child(4) {
-    left: 0px;
+  
     animation: bienvenido 4s ease;
-    transform: translateX(30px);
+    transform: translateX(15vw);
     opacity: 0;
   }
   
   @keyframes bienvenido {
     from {
       opacity: 0;
-      transform: translateX(30px);
-      transform: translateY(-150px);
+      transform: translateX(10vw);
+      transform: translateY(-15vh);
     }
     40% {
       opacity: 1;
     }
     70% {
       opacity: 0;
-      transform: translateX(30px);
+      transform: translateX(10vw);
       
       
     }
@@ -9828,7 +9813,6 @@ textarea.form-control {
     animation: campos 5s ease;
     transform: translateX(-100px);
     transform: translateY(160px);
-    left: 0px;
   }
   @keyframes campos {
     from {
@@ -9842,6 +9826,143 @@ textarea.form-control {
       opacity: 0;
       left: 102px;
       transform: translateX(60px);
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    #spanwelcome {
+      font-size: 20vw;
+    }
+    #spanwelcome:nth-child(1) {
+      left: 4vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(3) {
+      left: -5vw;
+      font-size: 20vw;
+    }
+    #spanwelcome:nth-child(5) {
+      left: -5vw;
+      font-size: 20vw;
+      top: 2vw;
+    }
+  
+    #spanwelcome:nth-child(2) {
+      left: 20vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(4) {
+      left: 2vw;
+      font-size: 11vw;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #spanwelcome {
+      font-size: 15vw;
+    }
+    #spanwelcome:nth-child(1) {
+      left: 4vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(3) {
+      left: -5vw;
+      font-size: 15vw;
+    }
+    #spanwelcome:nth-child(5) {
+      left: -5vw;
+      font-size: 15vw;
+      top: -3vw;
+    }
+  
+    #spanwelcome:nth-child(2) {
+      left: 20vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(4) {
+      left: 1.5vw;
+      font-size: 9vw;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    #spanwelcome {
+      left: 4vw;
+      font-size: 15vw;
+    }
+    #spanwelcome:nth-child(1) {
+      left: 10vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(3) {
+      left: -5vw;
+      font-size: 15vw;
+    }
+    #spanwelcome:nth-child(5) {
+      left: -5vw;
+      font-size: 15vw;
+      top: 0vw;
+    }
+  
+    #spanwelcome:nth-child(2) {
+      left: 20vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(4) {
+      left: 1.5vw;
+      font-size: 11vw;
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #spanwelcome {
+      font-size: 15vw;
+    }
+    #spanwelcome:nth-child(1) {
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(3) {
+      left: 0vw;
+      font-size: 15vw;
+    }
+    #spanwelcome:nth-child(5) {
+      left: 0vw;
+      font-size: 15vw;
+      top: 3vw;
+    }
+
+    #spanwelcome:nth-child(2) {
+      left: 20vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(4) {
+      left: 1vw;
+      font-size: 10vw;
+    }
+  }
+  @media screen and (min-width: 1201px) {
+    #spanwelcome {
+      left: 10vw;
+      font-size: 15vw;
+    }
+    #spanwelcome:nth-child(1) {
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(3) {
+      left: 0vw;
+      font-size: 15vw;
+    }
+    #spanwelcome:nth-child(5) {
+      left: 0vw;
+      font-size: 15vw;
+      top: 6vw;
+    }
+
+    #spanwelcome:nth-child(2) {
+      left: 20vw;
+      font-size: 8vw;
+    }
+    #spanwelcome:nth-child(4) {
+      left: 1vw;
+      font-size: 9vw;
     }
   }
 
