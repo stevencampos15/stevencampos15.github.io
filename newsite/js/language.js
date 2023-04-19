@@ -56,7 +56,7 @@ arrLang['en']['resume-tbd2'] = 'This year I am looking to expand my horizons, so
 
 //Services Section
 arrLang['en']['services'] = 'Services';
-arrLang['en']['services-desc'] = 'These are the areas where I think I stand out and where I\u0027m looking for new challenges.';
+arrLang['en']['services-desc'] = 'These are the areas where I stand out and where I\u0027m looking for new challenges.';
 arrLang['en']['services-web'] = 'Web Design';
 arrLang['en']['services-mobile'] = 'Mobile App Developer';
 arrLang['en']['services-webdev'] = 'Web Developer';
