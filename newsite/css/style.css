@@ -9962,7 +9962,7 @@ textarea.form-control {
     }
   }
 
-  @media screen and (max-width: 330px) {
+  @media screen and (max-width: 390px) {
     #spanwelcome {
       font-size: 20vw;
     }
@@ -9977,7 +9977,7 @@ textarea.form-control {
     #spanwelcome:nth-child(5) {
       left: -5vw;
       font-size: 20vw;
-      top: -20vw;
+      top: -12vw;
     }
   
     #spanwelcome:nth-child(2) {
