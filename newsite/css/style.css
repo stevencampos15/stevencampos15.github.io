@@ -9952,7 +9952,7 @@ textarea.form-control {
     #spanwelcome:nth-child(5) {
       left: -5vw;
       font-size: 20vw;
-      top: 2vw;
+      top: -35%;
     }
   
     #spanwelcome:nth-child(2) {
