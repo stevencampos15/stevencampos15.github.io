@@ -4904,7 +4904,7 @@ input[type="button"].btn-block {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
+
 }
 
 .navbar-toggler {
@@ -13269,6 +13269,7 @@ textarea.form-control {
 
 .heading-section h1.big.big-2 {
   right: 0;
+  text-transform: uppercase;
 }
 
 .heading-section h2 {
@@ -14392,7 +14393,6 @@ textarea.form-control {
 }
 
 /*end of typewriter*/
-
 
 @-webkit-keyframes loader-rotate {
   100% {
