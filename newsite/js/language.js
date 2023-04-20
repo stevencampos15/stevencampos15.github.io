@@ -65,11 +65,11 @@ arrLang['en']['services-desktop'] = 'Desktop Application Developer';
 arrLang['en']['services-prevent'] = 'Preventive and Corrective Maintenance';
 
 //Skills Section
-arrLang['en']['skills'] = 'My Skills';
+arrLang['en']['skills'] = 'Skills';
 arrLang['en']['skills-desc'] = 'I always seek to improve and develop new skills';
 
 //Projects Section
-arrLang['en']['projects'] = 'My Projects';
+arrLang['en']['projects'] = 'Projects';
 arrLang['en']['projects-desc'] = 'Some of the projects I\u0027ve done';
 arrLang['en']['projects-multi'] = 'Multiplatform Project';
 arrLang['en']['projects-fact'] = 'Billing System';

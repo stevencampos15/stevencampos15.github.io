@@ -4903,6 +4903,8 @@ input[type="button"].btn-block {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  text-align: center;
+  height: 100vh;
 }
 
 .navbar-toggler {
@@ -13272,6 +13274,8 @@ textarea.form-control {
 .heading-section h2 {
   font-size: 50px;
   font-weight: 700;
+  font-family: 'PPMori', sans-serif;
+  text-transform: uppercase;
 }
 
 .heading-section h2 span {
@@ -13280,7 +13284,7 @@ textarea.form-control {
 
 @media (max-width: 767.98px) {
   .heading-section h2 {
-    font-size: 38px;
+    font-size: 48px;
   }
 }
 
