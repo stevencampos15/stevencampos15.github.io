@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="css/language.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175247148-1"></script>
-	
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -42,7 +42,7 @@
 		//Calculate age for animation
 		var dob = new Date("06/08/1995");
 		var month_diff = Date.now() - dob.getTime();
-		var age_dt = new Date(month_diff);    
+		var age_dt = new Date(month_diff);
 		var year = age_dt.getUTCFullYear();
 		var age = Math.abs(year - 1970);
 
@@ -51,8 +51,8 @@
 		var differenceTime = Date.now() - firstDayOfCoffee.getTime();
 		var daysDrinkingCoffee = differenceTime / (1000 * 3600 * 24);
 		window.addEventListener('DOMContentLoaded', (event) => {
-		document.getElementById("age").setAttribute("data-number", age);
-		document.getElementById("daysofcoffee").setAttribute("data-number", daysDrinkingCoffee);
+			document.getElementById("age").setAttribute("data-number", age);
+			document.getElementById("daysofcoffee").setAttribute("data-number", daysDrinkingCoffee);
 		});
 	</script>
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -172,17 +172,19 @@
 										class="lang" key="about-date">08 Junio, 1995</span></li>
 								<li class="d-flex"><span class="lang" key="about-address">Direcci&oacute;n:</span>
 									<span>Santa Tecla, La Libertad, El
-										Salvador</span></li>
+										Salvador</span>
+								</li>
 								<li class="d-flex"><span>Email:</span> <span>stevencampos15@gmail.com</span></li>
 								<li class="d-flex"><span class="lang" key="about-phone">Tel&eacute;fono: </span>
-									<span>(+503) 6009-7967</span></li>
+									<span>(+503) 6009-7967</span>
+								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="counter-wrap ftco-animate d-flex mt-md-3">
 						<div class="text">
 							<p class="mb-4">
-								<span class="number" id="age" >0</span>
+								<span class="number" id="age">0</span>
 								<span class="lang" key="about-years">A&ntilde;os Aprendiendo</span>
 							</p>
 							<p><a href="etc/resume.pdf" target="_blank" class="btn btn-primary py-3 px-3 lang"
@@ -216,7 +218,7 @@
 							en ITCA, gracias a las herramientas y metodolog&iacute;a de teor&iacute;a y pr&aacute;ctica
 							aprend&iacute; mucho.</p>
 					</div>
-					
+
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2014</span>
 						<h2 class="lang" key="resume-dipccna">Diploma en CCNA</h2>
@@ -255,7 +257,7 @@
 							est&eacute; lista para una red.
 						</p>
 					</div>
-					
+
 
 					<div class="resume-wrap ftco-animate">
 						<span class="date">2015-2022</span>
@@ -294,13 +296,13 @@
 				<div class="col-md-12 heading-section text-center ftco-animate">
 					<h1 class="big big-2 lang" key="services">Servicios</h1>
 					<h2 class="mb-4 lang" key="services">Servicios</h2>
-					<p class="lang" key="services-desc">Estas son las &aacute;reas donde creo que destaco y busco nuevos
+					<p class="lang" key="services-desc">Estas son las &aacute;reas donde destaco y busco nuevos
 						retos.</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+					<a class="services-1">
 						<span class="icon">
 							<i class="flaticon-web-design"></i>
 						</span>
@@ -310,7 +312,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+					<a class="services-1">
 						<span class="icon">
 							<i class="flaticon-innovation"></i>
 						</span>
@@ -321,7 +323,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+					<a class="services-1">
 						<span class="icon">
 							<i class="flaticon-ux-design"></i>
 						</span>
@@ -332,7 +334,7 @@
 				</div>
 
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+					<a class="services-1">
 						<span class="icon">
 							<i class="flaticon-analysis"></i>
 						</span>
@@ -343,7 +345,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+					<a class="services-1">
 						<span class="icon">
 							<i class="flaticon-flasks"></i>
 						</span>
@@ -354,7 +356,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a href="#" class="services-1">
+					<a class="services-1">
 						<span class="icon">
 							<i class="flaticon-ideas"></i>
 						</span>
@@ -371,7 +373,7 @@
 	<section class="ftco-section">
 		<div class="container" id="skills-section">
 			<div class="row justify-content-center pb-5">
-				<div class="col-md-12 heading-section text-center ftco-animate" >
+				<div class="col-md-12 heading-section text-center ftco-animate">
 					<h1 class="big big-2 lang" key="nav-habilidades">Habilidades</h1>
 					<h2 class="mb-4 lang" key="skills">Mis Habilidades</h2>
 					<p class="lang" key="skills-desc">Busco siempre mejorar y desarrollar nuevas habilidades</p>
@@ -504,26 +506,30 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/multiplataforma2.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="proyectos/multiplataforma.html" class="lang" key="projects-multi">Proyecto
-									Multiplataforma</a></h3>
-							<span>Java</span>
+					<a href="proyectos/multiplataforma.html">
+						<div class="project img ftco-animate d-flex justify-content-center align-items-center"
+							style="background-image: url(images/multiplataforma2.jpg);">
+							<div class="overlay"></div>
+							<div class="text text-center p-4">
+								<h3><a href="proyectos/multiplataforma.html" class="lang" key="projects-multi">Proyecto
+										Multiplataforma</a></h3>
+								<span>Java</span>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<div class="col-md-8">
-					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/tv/desktop.JPG);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="proyectos/facturacion.html" class="lang" key="projects-fact">Programa de
-									Facturaci&oacute;n</a></h3>
-							<span class="lang" key="projects-fact2">JAVA-Escritorio</span>
+					<a href="proyectos/facturacion.html">
+						<div class="project img ftco-animate d-flex justify-content-center align-items-center"
+							style="background-image: url(images/tv/desktop.JPG);">
+							<div class="overlay"></div>
+							<div class="text text-center p-4">
+								<h3><a href="proyectos/facturacion.html" class="lang" key="projects-fact">Programa de
+										Facturaci&oacute;n</a></h3>
+								<span class="lang" key="projects-fact2">JAVA-Escritorio</span>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 
 				<div class="col-md-8">
@@ -531,7 +537,7 @@
 						style="background-image: url(images/project-1.jpg);">
 						<div class="overlay"></div>
 						<div class="text text-center p-4">
-							<h3><a href="#">Wroking on it...</a></h3>
+							<h3><a href="javascript:void(0)">Working on it...</a></h3>
 							<span>Otro Proyecto</span>
 						</div>
 					</div>
@@ -549,15 +555,18 @@
 				<div class="col-md-4">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-								style="background-image: url(images/pw/proyectoweb.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center p-4">
-									<h3><a href="proyectos/proyectoweb.html" class="lang" key="projects-web">Proyecto
-											Web</a></h3>
-									<span class="lang" key="projects-web2">Dise&ntilde;o y Desarrollo Web</span>
+							<a href="proyectos/proyectoweb.html">
+								<div class="project img ftco-animate d-flex justify-content-center align-items-center"
+									style="background-image: url(images/pw/proyectoweb.jpg);">
+									<div class="overlay"></div>
+									<div class="text text-center p-4">
+										<h3><a href="proyectos/proyectoweb.html" class="lang"
+												key="projects-web">Proyecto
+												Web</a></h3>
+										<span class="lang" key="projects-web2">Dise&ntilde;o y Desarrollo Web</span>
+									</div>
 								</div>
-							</div>
+							</a>
 						</div>
 						<!--
 						<div class="col-md-12">
@@ -611,7 +620,7 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18">
 						<div class="text">
-							<strong class="number" id="daysofcoffee" >0</strong>
+							<strong class="number" id="daysofcoffee">0</strong>
 							<span class="lang" key="projects-coffee">Tazas de Caf&eacute;</span>
 						</div>
 					</div>
@@ -630,7 +639,7 @@
 						<div class="lang" key="projects-challenges" style="display: initial;">a Nuevos Retos </div>
 					</h2>
 					<p>"The way to get started is to quit talking and begin doing."</p>
-					<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5 lang"
+					<p class="mb-0"><a href="#contact-section" class="btn btn-primary py-3 px-5 lang"
 							key="projects-contactme">Cont&aacute;ctame</a></p>
 				</div>
 			</div>
@@ -706,8 +715,8 @@
 
 			<div class="row no-gutters block-9">
 				<div class="col-md-6 order-md-last d-flex">
-					<form id="formContacto" method="POST"
-						encType="multipart/form-data" name="formContacto" class="bg-light p-4 p-md-5 contact-form" action="formulario-gracias" netlify >
+					<form id="formContacto" method="POST" encType="multipart/form-data" name="formContacto"
+						class="bg-light p-4 p-md-5 contact-form" action="formulario-gracias" netlify>
 						<div class="form-group">
 							<input type="text" name="name" id="frmName" required class="form-control"
 								placeholder="Tu Nombre">
@@ -768,19 +777,19 @@
 					<div class="ftco-footer-widget mb-4 ml-md-4">
 						<h2 class="ftco-heading-2">Links</h2>
 						<ul class="list-unstyled">
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#home-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="nav-inicio">Inicio</div>
 								</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="nav-acerca">Acerca de</div>
 								</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#services-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="nav-servicios">Servicios</div>
 								</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#projects-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="nav-proyectos">Proyectos</div>
 								</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="nav-contacto">Contacto</div>
 								</a></li>
 						</ul>
@@ -790,23 +799,23 @@
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2 lang" key="nav-servicios">Servicios</h2>
 						<ul class="list-unstyled">
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="services-web">Dise&ntilde;o Web
 									</div>
 								</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="services-mobile">Desarrollador de
 										Aplicaciones M&oacute;viles</div>
 								</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="services-webdev">Desarrollador Web
 									</div>
 								</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="services-database">Dise&ntilde;o y
 										Gesti&oacute;n de Bases de Datos</div>
 								</a></li>
-							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>
+							<li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>
 									<div style="display: initial;" class="lang" key="services-desktop">Desarrollador de
 										Aplicaciones de Escritorio</div>
 								</a></li>
@@ -848,7 +857,8 @@
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
 			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-				stroke="#F96D00" /></svg></div>
+				stroke="#F96D00" />
+		</svg></div>
 
 
 	<script src="js/jquery.min.js"></script>
