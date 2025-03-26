@@ -46,25 +46,25 @@
 
 :root {
   --radius: 0.5rem;
-  --background: 0 0% 11%;
-  --foreground: 0 0% 100%;
-  --card: 0 0% 11%;
-  --card-foreground: 0 0% 100%;
-  --popover: 0 0% 11%;
-  --popover-foreground: 0 0% 100%;
-  --primary: 210 22% 70%;
-  --primary-foreground: 0 0% 11%;
-  --secondary: 210 22% 70%;
-  --secondary-foreground: 0 0% 11%;
-  --muted: 0 0% 15%;
-  --muted-foreground: 215 20% 65%;
-  --accent: 210 22% 70%;
-  --accent-foreground: 0 0% 11%;
+  --background: 0 0% 98%;
+  --foreground: 0 0% 11%;
+  --card: 0 0% 65%;
+  --card-foreground: 0 0% 11%;
+  --popover: 0 0% 65%;
+  --popover-foreground: 0 0% 11%;
+  --primary: 210 22% 40%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 210 22% 40%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 60%;
+  --muted-foreground: 215 20% 35%;
+  --accent: 210 22% 40%;
+  --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
-  --border: 210 22% 70%;
-  --input: 210 22% 70%;
-  --ring: 210 22% 70%;
+  --border: 210 22% 40%;
+  --input: 210 22% 40%;
+  --ring: 210 22% 40%;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -120,6 +120,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#1C1C1C] text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
   }
 }

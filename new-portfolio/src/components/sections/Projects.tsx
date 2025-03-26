@@ -81,7 +81,7 @@ export default function Projects() {
   }, [selectedProject])
 
   return (
-    <section id="projects" className="w-full py-20 bg-[#1C1C1C]">
+    <section id="projects" className="w-full py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -97,7 +97,7 @@ export default function Projects() {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+              <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
                 {t('projects.title')}
               </h2>
             </motion.div>
@@ -111,7 +111,7 @@ export default function Projects() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 onClick={() => isMounted && setSelectedProject(project)}
-                className="bg-[#2A2A2A] rounded-lg overflow-hidden border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                className="bg-black text-white dark:bg-[#2A2A2A] rounded-lg overflow-hidden border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer shadow"
               >
                 <div className="relative h-48">
                   <Image
@@ -123,7 +123,7 @@ export default function Projects() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2 text-[#9CB7C9]">{project.title}</h3>
-                  <p className="text-gray-300 mb-4">
+                  <p className="text-foreground/80 dark:text-gray-300 mb-4">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -150,7 +150,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-[#9CB7C9] transition-colors inline-flex items-center gap-1"
+                      className="text-foreground/70 dark:text-gray-400 hover:text-[#9CB7C9] transition-colors inline-flex items-center gap-1"
                       onClick={(e) => e.stopPropagation()} // Prevent modal from opening when clicking links
                     >
                       {t('projects.viewGithub')}
@@ -174,7 +174,7 @@ export default function Projects() {
             onClick={() => setSelectedProject(null)}
           >
             <motion.div
-              className="bg-[#2A2A2A] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-black text-white dark:bg-[#2A2A2A] rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-lg"
               initial={{ scale: 0.9, y: 20, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.9, y: 20, opacity: 0 }}
@@ -189,7 +189,7 @@ export default function Projects() {
                   className="object-cover"
                 />
                 <button 
-                  className="absolute top-4 right-4 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                  className="absolute top-4 right-4 bg-black/50 dark:bg-black/50 text-foreground dark:text-white p-2 rounded-full hover:bg-black/70 transition-colors"
                   onClick={() => setSelectedProject(null)}
                 >
                   <X size={20} />
@@ -199,14 +199,14 @@ export default function Projects() {
               <div className="p-6 md:p-8">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#9CB7C9]">{selectedProject.title}</h2>
                 
-                <p className="text-gray-300 mb-6 text-lg">
+                <p className="text-foreground/80 dark:text-gray-300 mb-6 text-lg">
                   {selectedProject.detailedDescription || selectedProject.description}
                 </p>
                 
                 {selectedProject.features && (
                   <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-3 text-white">Key Features</h3>
-                    <ul className="list-disc pl-5 text-gray-300 space-y-1">
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">Key Features</h3>
+                    <ul className="list-disc pl-5 text-foreground/80 dark:text-gray-300 space-y-1">
                       {selectedProject.features.map((feature, idx) => (
                         <li key={idx}>{feature}</li>
                       ))}
@@ -216,8 +216,8 @@ export default function Projects() {
                 
                 {selectedProject.challenges && (
                   <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-3 text-white">Challenges & Solutions</h3>
-                    <ul className="list-disc pl-5 text-gray-300 space-y-1">
+                    <h3 className="text-xl font-semibold mb-3 text-foreground">Challenges & Solutions</h3>
+                    <ul className="list-disc pl-5 text-foreground/80 dark:text-gray-300 space-y-1">
                       {selectedProject.challenges.map((challenge, idx) => (
                         <li key={idx}>{challenge}</li>
                       ))}
@@ -226,7 +226,7 @@ export default function Projects() {
                 )}
                 
                 <div className="mb-6">
-                  <h3 className="text-xl font-semibold mb-3 text-white">Technologies</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">Technologies</h3>
                   <div className="flex flex-wrap gap-2">
                     {selectedProject.tags.map(tag => (
                       <span
@@ -253,7 +253,7 @@ export default function Projects() {
                     href={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-[#3A3A3A] text-white rounded-lg hover:bg-[#4A4A4A] transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-muted dark:bg-[#3A3A3A] text-foreground dark:text-white rounded-lg hover:bg-[#4A4A4A] transition-colors"
                   >
                     <Github size={18} />
                     {t('projects.viewGithub')}

@@ -247,13 +247,13 @@ const ExperienceIcon = () => {
         />
         
         {/* Fins - static version */}
-        <path
+        <path 
           d="M40,70 L30,85 L40,80 Z"
           fill="#FFFFFF"
           stroke="#DDDDDD"
           strokeWidth="1"
         />
-        <path
+        <path 
           d="M60,70 L70,85 L60,80 Z"
           fill="#FFFFFF"
           stroke="#DDDDDD"
@@ -261,7 +261,7 @@ const ExperienceIcon = () => {
         />
         
         {/* Rocket flames - static version */}
-        <path
+        <path 
           d="M45,80 Q50,95 55,80"
           fill="transparent"
           stroke="#FF6B6B"
@@ -330,7 +330,7 @@ const ExperienceIcon = () => {
                 stroke="#FFDD00"
                 strokeWidth="2"
                 strokeLinecap="round"
-                animate={{ 
+                animate={{
                   d: [
                     "M47,80 Q50,90 53,80",
                     "M47,80 Q50,93 53,80",
@@ -338,7 +338,7 @@ const ExperienceIcon = () => {
                   ],
                   opacity: [0.8, 1, 0.8]
                 }}
-                transition={{ 
+                transition={{
                   duration: 0.5,
                   repeat: Infinity,
                   ease: "easeInOut"
@@ -416,106 +416,160 @@ const LearningIcon = () => {
   return (
     <div className="relative w-20 h-20 mx-auto mb-4">
       <svg viewBox="0 0 100 100" className="w-full h-full">
-        {/* Book base - static version */}
+        {/* Lightbulb stem */}
         <path
-          d="M25,30 L25,80 L75,80 L75,30 L50,20 Z"
-          fill="#FFFFFF"
-          stroke="#DDDDDD"
-          strokeWidth="2"
-        />
-        
-        {/* Book pages - static version */}
-        <path
-          d="M50,20 L50,80"
+          d="M50,70 L50,75"
           fill="none"
-          stroke="#DDDDDD"
+          stroke="#FFFFFF"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
+        
+        {/* Lightbulb base */}
+        <path
+          d="M40,75 L60,75 L58,82 L42,82 Z"
+          fill="#DDDDDD"
+          stroke="#FFFFFF"
+          strokeWidth="1.5"
+        />
+        
+        {/* Lightbulb glass */}
+        <path
+          d="M38,40 C38,28 62,28 62,40 C62,60 58,68 58,75 L42,75 C42,68 38,60 38,40 Z"
+          fill="#9CB7C950"
+          stroke="#FFFFFF"
           strokeWidth="2"
         />
         
-        {/* Book details - Page lines - static version */}
+        {/* Lightbulb top reflection */}
         <path
-          d="M30,40 L45,40 M30,50 L45,50 M30,60 L45,60 M30,70 L45,70"
-          stroke="#9CB7C9"
+          d="M46,32 C46,30 54,30 54,32"
+          fill="none"
+          stroke="#FFFFFF"
           strokeWidth="1"
           strokeLinecap="round"
-        />
-        <path
-          d="M55,40 L70,40 M55,50 L70,50 M55,60 L70,60 M55,70 L70,70"
-          stroke="#9CB7C9"
-          strokeWidth="1"
-          strokeLinecap="round"
-        />
-        
-        {/* Reading light glow - static version */}
-        <circle
-          cx="50"
-          cy="10"
-          r="5"
-          fill="#FFDE59"
-          opacity="0.5"
-        />
-        
-        {/* Light beam - static version */}
-        <path
-          d="M50,15 L50,20"
-          stroke="#FFDE5950"
-          strokeWidth="10"
-          strokeLinecap="round"
-          opacity="0.2"
+          opacity="0.8"
         />
         
         {/* Add animated elements only after mounting */}
         {mounted && (
           <>
-            {/* Animated book */}
-            <motion.g
+            {/* Animated lightbulb glow - outer */}
+            <motion.ellipse
+              cx="50"
+              cy="50"
+              rx="22"
+              ry="30"
+              fill="#FFDE5920"
               animate={{ 
-                y: [0, -1, 0],
-                rotate: [0, 0.5, 0]
+                opacity: [0.1, 0.3, 0.1],
+                rx: [22, 25, 22],
+                ry: [30, 33, 30]
               }}
               transition={{ 
                 duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-              style={{ transformOrigin: 'center' }}
-            >
-              {/* Animated light */}
-              <motion.circle
-                cx="50"
-                cy="10"
-                r="5"
-                fill="#FFDE59"
-                opacity="0.5"
-                animate={{ 
-                  opacity: [0.5, 0.8, 0.5],
-                  r: [5, 6, 5]
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-              
-              {/* Animated light beam */}
-              <motion.path
-                d="M50,15 L50,20"
-                stroke="#FFDE5950"
-                strokeWidth="10"
+            />
+            
+            {/* Animated lightbulb glow - inner */}
+            <motion.ellipse
+              cx="50"
+              cy="50"
+              rx="15"
+              ry="22"
+              fill="#FFDE5930"
+              animate={{ 
+                opacity: [0.2, 0.5, 0.2],
+                rx: [15, 17, 15],
+                ry: [22, 24, 22]
+              }}
+              transition={{ 
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.2
+              }}
+            />
+            
+            {/* Animated filament */}
+            <motion.path
+              d="M44,60 Q50,45 56,60"
+              fill="none"
+              stroke="#FFDE59"
+              strokeWidth="2"
+              strokeLinecap="round"
+              animate={{ 
+                opacity: [0.5, 1, 0.5]
+              }}
+              transition={{ 
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+            
+            {/* Light rays */}
+            {[
+              { x1: 50, y1: 25, x2: 50, y2: 15, delay: 0.1 },
+              { x1: 50, y1: 50, x2: 30, y2: 30, delay: 0.4 },
+              { x1: 50, y1: 50, x2: 70, y2: 30, delay: 0.7 },
+              { x1: 50, y1: 50, x2: 25, y2: 50, delay: 1.0 },
+              { x1: 50, y1: 50, x2: 75, y2: 50, delay: 1.3 },
+              { x1: 50, y1: 50, x2: 30, y2: 65, delay: 1.6 },
+              { x1: 50, y1: 50, x2: 70, y2: 65, delay: 1.9 }
+            ].map((ray, i) => (
+              <motion.line
+                key={`ray-${i}`}
+                x1={ray.x1}
+                y1={ray.y1}
+                x2={ray.x2}
+                y2={ray.y2}
+                stroke="#FFDE59"
+                strokeWidth="1.5"
                 strokeLinecap="round"
-                opacity="0.2"
+                initial={{ opacity: 0 }}
                 animate={{ 
-                  opacity: [0.2, 0.4, 0.2],
-                  strokeWidth: [10, 12, 10]
+                  opacity: [0, 0.7, 0]
                 }}
                 transition={{ 
                   duration: 2,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
+                  delay: ray.delay
                 }}
               />
-            </motion.g>
+            ))}
+            
+            {/* Light particles */}
+            {[
+              { cx: 40, cy: 35, size: 4, delay: 0.2 },
+              { cx: 60, cy: 35, size: 3, delay: 0.6 },
+              { cx: 35, cy: 55, size: 3, delay: 1.0 },
+              { cx: 65, cy: 55, size: 4, delay: 1.4 },
+              { cx: 50, cy: 30, size: 3, delay: 1.8 }
+            ].map((particle, i) => (
+              <motion.circle
+                key={`particle-${i}`}
+                cx={particle.cx}
+                cy={particle.cy}
+                r={particle.size / 2}
+                fill="#FFDE59"
+                initial={{ opacity: 0 }}
+                animate={{ 
+                  opacity: [0, 0.8, 0],
+                  y: [-2, -particle.size * 2],
+                  x: [0, (Math.random() * 4) - 2]
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                  delay: particle.delay
+                }}
+              />
+            ))}
           </>
         )}
       </svg>
@@ -653,7 +707,7 @@ export default function About() {
   }, [])
 
   return (
-    <section id="about" className="w-full py-20 bg-[#1C1C1C] relative overflow-hidden">
+    <section id="about" className="w-full py-20 bg-background relative overflow-hidden">
       {/* Particles will only render animations client-side */}
       <Particles />
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-[#9CB7C9]/5 to-transparent opacity-30" />
@@ -673,13 +727,13 @@ export default function About() {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+              <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
                 {t('about.title')}
               </h2>
             </motion.div>
           </div>
           
-          <div className="space-y-6 text-gray-300">
+          <div className="space-y-6 text-foreground/80 dark:text-gray-300">
             <motion.p 
               className="text-lg"
               initial={{ opacity: 0, y: 10 }}
@@ -711,40 +765,40 @@ export default function About() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              whileHover={isMounted ? { y: -5, boxShadow: "0 10px 25px -5px rgba(156, 183, 201, 0.15)" } : {}}
-              className="p-8 bg-[#2A2A2A] rounded-lg border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/50 transition-all duration-300 flex flex-col items-center"
+              whileHover={isMounted ? { y: -5, boxShadow: "0 10px 25px -5px rgba(156, 183, 201, 0.3)" } : {}}
+              className="p-8 bg-black text-white dark:bg-[#2A2A2A] rounded-lg border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/50 transition-all duration-300 flex flex-col items-center shadow"
             >
               <ExperienceIcon />
               <h3 className="font-bold text-3xl mb-1 text-[#9CB7C9]">
                 {yearsExperience}
               </h3>
-              <p className="text-gray-400">{t('about.cards.yearsExperience')}</p>
+              <p className="text-foreground/70 dark:text-gray-400">{t('about.cards.yearsExperience')}</p>
             </motion.div>
             
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              whileHover={isMounted ? { y: -5, boxShadow: "0 10px 25px -5px rgba(156, 183, 201, 0.15)" } : {}}
-              className="p-8 bg-[#2A2A2A] rounded-lg border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/50 transition-all duration-300 flex flex-col items-center"
+              whileHover={isMounted ? { y: -5, boxShadow: "0 10px 25px -5px rgba(156, 183, 201, 0.3)" } : {}}
+              className="p-8 bg-black text-white dark:bg-[#2A2A2A] rounded-lg border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/50 transition-all duration-300 flex flex-col items-center shadow"
             >
               <LearningIcon />
               <h3 className="font-bold text-3xl mb-1 text-[#9CB7C9]">{age}</h3>
-              <p className="text-gray-400">{t('about.cards.yearsLearning')}</p>
+              <p className="text-foreground/70 dark:text-gray-400">{t('about.cards.yearsLearning')}</p>
             </motion.div>
             
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              whileHover={isMounted ? { y: -5, boxShadow: "0 10px 25px -5px rgba(156, 183, 201, 0.15)" } : {}}
-              className="p-8 bg-[#2A2A2A] rounded-lg border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/50 transition-all duration-300 flex flex-col items-center"
+              whileHover={isMounted ? { y: -5, boxShadow: "0 10px 25px -5px rgba(156, 183, 201, 0.3)" } : {}}
+              className="p-8 bg-black text-white dark:bg-[#2A2A2A] rounded-lg border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/50 transition-all duration-300 flex flex-col items-center shadow"
             >
               <CoffeeCup />
               <h3 className="font-bold text-3xl mb-1 text-[#9CB7C9]">
                 {coffeeCount}
               </h3>
-              <p className="text-gray-400">{t('about.cards.coffeeCount')}</p>
+              <p className="text-foreground/70 dark:text-gray-400">{t('about.cards.coffeeCount')}</p>
             </motion.div>
           </div>
         </motion.div>

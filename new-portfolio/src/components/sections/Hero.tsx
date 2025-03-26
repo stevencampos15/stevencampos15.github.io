@@ -48,7 +48,7 @@ export default function Hero() {
   }, [controls, t])
 
   return (
-    <section className="w-full min-h-screen flex flex-col bg-[#1C1C1C] relative pt-20">
+    <section className="w-full min-h-screen flex flex-col bg-background relative pt-20">
       {/* Hero Content */}
       <div className="flex-1 flex items-center">
         <div className="container mx-auto px-4">
@@ -57,7 +57,7 @@ export default function Hero() {
             {/* Hello text */}
             <div className="w-full lg:w-1/2">
               <motion.h1 
-                className="text-[11rem] md:text-[12rem] font-bold tracking-tighter text-white leading-none"
+                className="text-[11rem] md:text-[12rem] font-bold tracking-tighter text-foreground leading-none"
                 initial={{ opacity: 0, y: 30 }}
                 animate={controls}
                 transition={{ duration: 0.8 }}
@@ -77,7 +77,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 0.8 }}
             >
-              <p className="text-sm md:text-base text-[#9a9a9a] font-extralight">
+              <p className="text-sm md:text-base text-[#404040] dark:text-[#9a9a9a] font-extralight">
                 {t('hero.aboutMe')}
               </p>
             </motion.div>

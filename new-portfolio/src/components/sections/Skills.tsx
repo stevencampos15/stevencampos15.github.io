@@ -48,7 +48,7 @@ export default function Skills() {
   const filteredSkills = skills.filter(skill => skill.category === activeTab)
 
   return (
-    <section id="skills" className="w-full py-20 bg-[#1C1C1C]">
+    <section id="skills" className="w-full py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -64,7 +64,7 @@ export default function Skills() {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+              <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
                 {t('skills.title')}
               </h2>
             </motion.div>
@@ -78,8 +78,8 @@ export default function Skills() {
                 onClick={() => setActiveTab(category)}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeTab === category
-                    ? 'bg-[#9CB7C9] text-[#1C1C1C]'
-                    : 'bg-[#2A2A2A] text-gray-300 hover:bg-[#9CB7C9]/20'
+                    ? 'bg-[#9CB7C9] text-background'
+                    : 'bg-muted text-muted-foreground hover:bg-[#9CB7C9]/20'
                 }`}
               >
                 {category}
@@ -95,11 +95,11 @@ export default function Skills() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 bg-[#2A2A2A] rounded-lg border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/40 transition-colors"
+                className="p-6 bg-black text-white dark:bg-[#2A2A2A] rounded-lg border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/40 transition-colors shadow"
               >
                 <h3 className="font-bold text-lg mb-2 text-[#9CB7C9]">{skill.name}</h3>
                 <div className="mt-2">
-                  <div className="h-2 bg-[#1C1C1C] rounded-full">
+                  <div className="h-2 bg-muted rounded-full">
                     <div 
                       className={`h-full bg-[#9CB7C9] rounded-full ${
                         skill.level === "Advanced" ? "w-full" : 
@@ -107,7 +107,7 @@ export default function Skills() {
                       }`}
                     />
                   </div>
-                  <p className="text-xs text-gray-400 mt-1">{skill.level}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{skill.level}</p>
                 </div>
               </motion.div>
             ))}

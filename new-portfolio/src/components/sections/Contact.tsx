@@ -2,10 +2,8 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { useLanguage } from "@/context/LanguageContext"
-import emailjs from '@emailjs/browser'
-import ReCAPTCHA from "react-google-recaptcha"
 
 // Social media icons component
 const SocialIcon = ({ type }: { type: 'github' | 'linkedin' | 'instagram' | 'twitter' }) => {
@@ -44,102 +42,17 @@ export default function Contact() {
   })
 
   const { t } = useLanguage()
-  const formRef = useRef<HTMLFormElement>(null)
-  const recaptchaRef = useRef<ReCAPTCHA>(null)
-  
-  // EmailJS and reCAPTCHA credentials from environment variables
-  const emailjsServiceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
-  const emailjsTemplateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
-  const emailjsPublicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
-  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '';
-  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   })
-  
-  const [status, setStatus] = useState({
-    submitted: false,
-    submitting: false,
-    info: { error: false, msg: null as string | null }
-  })
-
-  useEffect(() => {
-    if (status.submitted) {
-      // Reset form after successful submission
-      const timer = setTimeout(() => {
-        setStatus({
-          submitted: false,
-          submitting: false,
-          info: { error: false, msg: null }
-        })
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        })
-      }, 5000)
-      
-      return () => clearTimeout(timer)
-    }
-  }, [status])
-
-  const handleServerResponse = (ok: boolean, msg: string) => {
-    if (ok) {
-      setStatus({
-        submitted: true,
-        submitting: false,
-        info: { error: false, msg }
-      })
-    } else {
-      setStatus({
-        submitted: false,
-        submitting: false,
-        info: { error: true, msg }
-      })
-    }
-  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
-    setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
-    
-    try {
-      // Verify that required environment variables are set
-      if (!emailjsServiceId || !emailjsTemplateId || !emailjsPublicKey || !recaptchaSiteKey) {
-        throw new Error('Email service credentials are not configured. Please contact the site administrator.');
-      }
-      
-      // Verify reCAPTCHA
-      const recaptchaToken = await recaptchaRef.current?.executeAsync()
-      
-      if (!recaptchaToken) {
-        throw new Error('reCAPTCHA verification failed. Please try again.');
-      }
-      
-      // Reset reCAPTCHA for next submission
-      recaptchaRef.current?.reset()
-      
-      // Send email using EmailJS
-      const result = await emailjs.sendForm(
-        emailjsServiceId,
-        emailjsTemplateId,
-        formRef.current!,
-        emailjsPublicKey
-      )
-      
-      handleServerResponse(
-        true,
-        'Thank you for your message! I will get back to you soon.'
-      )
-    } catch (error) {
-      handleServerResponse(
-        false,
-        error instanceof Error ? error.message : 'Something went wrong. Please try again later.'
-      )
-    }
+    // Add your form submission logic here
+    console.log("Form submitted:", formData)
   }
 
   const socialLinks = [
@@ -166,7 +79,7 @@ export default function Contact() {
   ]
 
   return (
-    <section id="contact" className="w-full py-20 bg-[#1C1C1C]">
+    <section id="contact" className="w-full py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
@@ -182,21 +95,26 @@ export default function Contact() {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+              <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
                 {t('contact.title')}
               </h2>
             </motion.div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-[#2A2A2A] p-8 rounded-lg border border-[#9CB7C9]/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              className="bg-black text-white dark:bg-[#2A2A2A] p-8 rounded-lg shadow border border-[#9CB7C9]/20 hover:border-[#9CB7C9]/40 transition-colors"
+            >
               <h3 className="text-2xl font-bold mb-6 text-[#9CB7C9]">{t('contact.info')}</h3>
               <div className="space-y-4">
-                <p className="flex items-center gap-2 text-gray-300">
+                <p className="flex items-center gap-2 text-foreground/80 dark:text-gray-300">
                   <span className="text-[#9CB7C9]">📍</span>
                   {t('contact.location')}
                 </p>
-                <p className="flex items-center gap-2 text-gray-300">
+                <p className="flex items-center gap-2 text-foreground/80 dark:text-gray-300">
                   <span className="text-[#9CB7C9]">📧</span>
                   stevencampos15@gmail.com
                 </p>
@@ -211,7 +129,7 @@ export default function Contact() {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-300 hover:text-[#9CB7C9] transition-colors"
+                      className="flex items-center gap-2 text-foreground/80 dark:text-gray-300 hover:text-[#9CB7C9] transition-colors"
                     >
                       <span className="text-[#9CB7C9]">
                         <SocialIcon type={social.icon as 'github' | 'linkedin' | 'instagram' | 'twitter'} />
@@ -221,84 +139,56 @@ export default function Contact() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
             
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-              {status.info.error && (
-                <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400">
-                  <p>{status.info.msg}</p>
-                </div>
-              )}
-              {status.submitted && (
-                <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400">
-                  <p>{status.info.msg}</p>
-                </div>
-              )}
-            
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-300">
+                <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground/80 dark:text-gray-300">
                   {t('contact.form.name')}
                 </label>
                 <input
                   type="text"
-                  name="user_name"
                   id="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 rounded-lg border border-[#9CB7C9]/20 bg-[#2A2A2A] text-white focus:ring-2 focus:ring-[#9CB7C9] focus:border-transparent outline-none transition-shadow"
+                  className="w-full py-2 px-4 bg-black text-white dark:bg-[#2A2A2A] border border-[#9CB7C9]/20 focus:border-[#9CB7C9] rounded-lg transition-colors focus:outline-none"
                   required
-                  disabled={status.submitting}
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2 text-gray-300">
+                <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground/80 dark:text-gray-300">
                   {t('contact.form.email')}
                 </label>
                 <input
                   type="email"
-                  name="user_email"
                   id="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2 rounded-lg border border-[#9CB7C9]/20 bg-[#2A2A2A] text-white focus:ring-2 focus:ring-[#9CB7C9] focus:border-transparent outline-none transition-shadow"
+                  className="w-full py-2 px-4 bg-black text-white dark:bg-[#2A2A2A] border border-[#9CB7C9]/20 focus:border-[#9CB7C9] rounded-lg transition-colors focus:outline-none"
                   required
-                  disabled={status.submitting}
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2 text-gray-300">
+                <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground/80 dark:text-gray-300">
                   {t('contact.form.message')}
                 </label>
                 <textarea
                   id="message"
-                  name="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={4}
-                  className="w-full px-4 py-2 rounded-lg border border-[#9CB7C9]/20 bg-[#2A2A2A] text-white focus:ring-2 focus:ring-[#9CB7C9] focus:border-transparent outline-none transition-shadow"
+                  className="w-full h-32 py-2 px-4 bg-black text-white dark:bg-[#2A2A2A] border border-[#9CB7C9]/20 focus:border-[#9CB7C9] rounded-lg resize-none transition-colors focus:outline-none"
                   required
-                  disabled={status.submitting}
                 />
               </div>
               
-              {/* Hidden reCAPTCHA - version 3 is invisible */}
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                size="invisible"
-                sitekey={recaptchaSiteKey}
-              />
-              
               <button
                 type="submit"
-                disabled={status.submitting}
-                className="w-full px-6 py-3 bg-[#9CB7C9] text-[#1C1C1C] rounded-lg font-medium hover:bg-[#8BA5B7] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full px-6 py-3 bg-[#9CB7C9] text-[#1C1C1C] rounded-lg font-medium hover:bg-[#8BA5B7] transition-colors"
               >
-                {status.submitting 
-                  ? <span>{t('contact.form.sending')}</span> 
-                  : <span>{t('contact.form.send')}</span>
-                }
+                {t('contact.form.send')}
               </button>
             </form>
           </div>

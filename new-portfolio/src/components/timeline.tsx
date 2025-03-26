@@ -8,7 +8,7 @@ export function Timeline() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-16 bg-[#1C1C1C]">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="w-full mb-12">
           <motion.div 
@@ -17,11 +17,11 @@ export function Timeline() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
+            <h2 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
               {t('timeline.title')}
             </h2>
           </motion.div>
-          <p className="text-gray-400 max-w-2xl mx-auto mt-6 px-4">{t('timeline.description')}</p>
+          <p className="text-foreground/70 dark:text-gray-400 max-w-2xl mx-auto mt-6 px-4">{t('timeline.description')}</p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
@@ -45,10 +45,10 @@ export function Timeline() {
 
                 {/* Content */}
                 <div className={`w-1/2 ${index % 2 === 0 ? "pr-8" : "pl-8"}`}>
-                  <div className="bg-[#2A2A2A] p-4 rounded-lg border border-[#9CB7C9]/20">
+                  <div className="bg-black text-white dark:bg-[#2A2A2A] p-4 rounded-lg border border-[#9CB7C9]/20 shadow">
                     <div className="text-sm text-[#9CB7C9] mb-2">{item.date}</div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 text-sm mb-3">{item.description}</p>
+                    <h3 className="text-lg font-semibold text-foreground dark:text-white mb-2">{item.title}</h3>
+                    <p className="text-foreground/70 dark:text-gray-400 text-sm mb-3">{item.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {item.skills.map((skill: string, skillIndex: number) => (
                         <span

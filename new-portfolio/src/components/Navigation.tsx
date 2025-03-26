@@ -3,9 +3,11 @@
 import { useLanguage } from "@/context/LanguageContext"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useTheme } from "next-themes"
 
 export default function Navigation() {
   const { t } = useLanguage()
+  const { theme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [hasScrolled, setHasScrolled] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
@@ -73,13 +75,13 @@ export default function Navigation() {
   const containerClasses = "fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
   // Conditionally add dynamic classes only on the client side
   const dynamicBgClass = isMounted ? 
-    (hasScrolled && !isMenuOpen ? 'bg-[#1C1C1C] bg-opacity-95 backdrop-blur-sm' : '') : ''
+    (hasScrolled && !isMenuOpen ? 'bg-background dark:bg-[#1C1C1C] bg-opacity-95 backdrop-blur-sm' : '') : ''
 
   return (
     <div className={`${containerClasses} ${dynamicBgClass}`}>
       <div className="container mx-auto px-4 py-6">
         <div className="flex justify-between items-center relative z-20">
-          <a href="#" className="text-white text-xl font-bold">Steven Campos</a>
+          <a href="#" className="text-foreground font-bold text-xl">Steven Campos</a>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8">
@@ -87,7 +89,7 @@ export default function Navigation() {
               <a 
                 key={index}
                 href={link.href} 
-                className="text-white hover:text-[#9CB7C9] transition-colors"
+                className="text-foreground hover:text-[#9CB7C9] dark:text-white dark:hover:text-[#9CB7C9] transition-colors"
               >
                 {link.label}
               </a>
@@ -100,9 +102,9 @@ export default function Navigation() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            <span className={`block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 ${isMounted && isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300 ${isMounted && isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-            <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isMounted && isMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-foreground dark:bg-white mb-1.5 transition-all duration-300 ${isMounted && isMenuOpen ? 'transform rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-foreground dark:bg-white mb-1.5 transition-all duration-300 ${isMounted && isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+            <span className={`block w-6 h-0.5 bg-foreground dark:bg-white transition-all duration-300 ${isMounted && isMenuOpen ? 'transform -rotate-45 -translate-y-2' : ''}`}></span>
           </button>
         </div>
       </div>
@@ -112,7 +114,7 @@ export default function Navigation() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className="md:hidden fixed inset-0 bg-[#1C1C1C] mobile-menu z-10 flex flex-col justify-center"
+              className="md:hidden fixed inset-0 bg-background dark:bg-[#1C1C1C] mobile-menu z-10 flex flex-col justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -123,7 +125,7 @@ export default function Navigation() {
                   <motion.a
                     key={index}
                     href={link.href}
-                    className="text-white text-2xl py-6 hover:text-[#9CB7C9] transition-colors text-center w-full"
+                    className="text-foreground dark:text-white text-2xl py-6 hover:text-[#9CB7C9] dark:hover:text-[#9CB7C9] transition-colors text-center w-full"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
